@@ -1,0 +1,14 @@
+.clock-container{
+    /* background: gray; */
+    border: 2px solid gray;
+    /* padding: 20p; */
+    position: relative;
+}
+.clock-container::after{
+    /* content: '12'; */
+    position: absolute;
+    top: 0;
+    left: 100px;
+    font-size: 20px;
+}
+

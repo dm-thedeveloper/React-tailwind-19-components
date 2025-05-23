@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Filter Demo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f0f0f0;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .original, .filtered {
+      display: inline-block;
+      margin: 1rem;
+    }
+
+    .image {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .filtered img {
+      filter: grayscale(0.8) blur(2px) brightness(120%) contrast(130%) sepia(0.5);
+    }
+
+    h2 {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Filter Property Demo</h1>
+
+  <div class="original">
+    <h2>Original</h2>
+    <img src="https://picsum.photos/300/200" alt="Sample" class="image">
+  </div>
+
+  <div class="filtered">
+    <h2>Filtered</h2>
+    <img src="https://picsum.photos/300/200" alt="Sample with filter" class="image">
+  </div>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .progress-container {
+        display: flex;
+        /* background: #372d2d; */
+        max-width: 300px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+    }
+    .progress-container::before{
+        content:"";
+        position: absolute;
+        height: 5px;
+        width: 100%;
+        background: #000;
+        top: 50%;
+        left: 0%;
+        z-index: -1;
+        transform: translateY(-50%);
+
+    }
+    .circle{
+        background: white;
+        height: 30px;
+        width: 30px;
+        color: black;
+        border-radius: 100%;
+        display: flex;
+        justify-content:center ;
+        align-items: center;
+        font-size: 20px;
+        border: 2px solid black;
+        
+    }
+    .circle.active{
+        background: blue;
+        color: white;
+        border-color: white;
+    }
+
+  </style>
+  <body>
+    <div class="progress-container">
+        <div class="circle active">1</div>
+        <div class="circle">2</div>
+        <div class="circle">3</div>
+        <div class="circle">4</div>
+
+
+
+
+    </div>
+  </body>
+</html> -->

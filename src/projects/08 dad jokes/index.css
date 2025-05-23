@@ -1,0 +1,33 @@
+.dad-jokes-container::before,
+.dad-jokes-container::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Left corner image */
+.dad-jokes-container::before {
+  left: 10px;
+  top: 10px;
+  background-image: url('./img.png');
+  z-index: 1;
+  /* filter:grayscale(50%) ; */
+  /* filter: blur(1px); */
+  /* filter: brightness(.5); */
+  filter: contrast(50%);
+  /* grayscale(100%) blur(2px) brightness(1.2) contrast(110%) */
+
+
+
+}
+
+/* Right corner image */
+.dad-jokes-container::after {
+  right: 10px;
+  bottom: 10px;
+  /* background-image: url('https://i.pinimg.com/736x/95/7e/94/957e941e6aeecbe439974fa705368e64.jpg'); */
+}

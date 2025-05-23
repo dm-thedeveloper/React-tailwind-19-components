@@ -1,0 +1,28 @@
+
+
+.split-left::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgb(227, 22, 22);
+    opacity: .5;
+    z-index: -1;
+    transition: all 1s linear;
+}
+.split-left:hover::before{
+    opacity:0;
+}
+.split-right::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: orange;
+    opacity: .5;
+    z-index: -1;
+    transition: all 1s linear;
+}
+.split-right:hover::before{
+    opacity:0;
+}
+
+

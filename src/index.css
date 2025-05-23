@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+/* Roboto mono */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+:root{
+    --prgoress-blue: #3498db;
+    --progress-gray: #E0E0E0;
+    --muli-font :"Mulish", sans-serif;
+}
+
+*{
+    font-family: var(--muli-font);
+}
+body{
+    overflow-x: hidden;
+}
+
+.animation-on-scroll-card{
+    /* background: #000; */
+    position: relative;
+
+}
+
+.animation-on-scroll-card::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background:rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    border-radius: 6px;
+    transition: width  .2s linear;
+    z-index: -2
+}
+.animation-on-scroll-card:hover::before{
+    width: 100%;
+}
+
+/* You can adjust these in your CSS file */
+.box {
+    transition: all 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  
+  .box.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

@@ -1,0 +1,102 @@
+.form-control input:focus + label span {
+  transform: translateY(-20px);
+  color: steelblue;
+}
+/* 
+.form-control input:valid + label span
+{
+    transform: translateY(-20px);
+    color: steelblue;
+} */
+
+.Form-control2 label span{
+  /* color: red; */
+  display: inline-block;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+
+.Form-control2 input:focus + label span  , 
+.Form-control2 input:valid +label span
+{
+  transform: translateY(-30px);
+}
+
+.Form-control2 input:focus,
+.Form-control2 input:valid {
+  /* display: inline-block;      Make transform work */
+  /* transform: translateY(-30px); */
+  color: red;
+}
+
+/* Form Animation Custom CSS */
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+.Form-wave-body-css {
+  font-family: "Muli", sans-serif;
+
+  height: 100vh;
+  width: 100%;
+  background-color: steelblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.waver-css-contaover {
+  background-color: #00000066;
+  padding: 20px 40px;
+  border-radius: 5px;
+}
+.waver-css-contaover h1 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.form-control-css {
+  position: relative;
+  width: 300px;
+  margin: 20px 0px 40px;
+}
+.form-control-css input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  /* padding: 15px 0; */
+  font-size: 18px;
+  color: #fff;
+}
+
+.form-control-css input:focus,
+.form-control-css input:valid {
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+.form-control-css label {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+}
+.form-control-css label span {
+  display: inline-block;
+  font-size: 18px;
+  color: white;
+  /* max-width: 5px; */
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+
+.form-control-css input:focus , 
+.form-control-css input:valid{
+  border-bottom-color: steelblue;
+}
+.form-control-css input:focus + label span,
+.form-control-css input:valid + label span {
+  color: steelblue;
+  transform: translateY(-20px);
+}
