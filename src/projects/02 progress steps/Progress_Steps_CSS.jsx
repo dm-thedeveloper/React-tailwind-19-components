@@ -27,14 +27,15 @@ const Progress_Steps_CSS = () => {
 
           {/* Progress line */}
           <div
-            className={`absolute w-[40%] top-1/2 left-0 h-1 bg-[#3498db] -z-1 transform -translate-y-1/2 transition-all duration-300 ease-in-out`}
+          style={{width:`${progressWidth}%`}}
+            className={`absolute w-[40%] top-1/2 left-0 h-1 bg-[#3498db] -z-10 transform -translate-y-1/2 transition-all duration-300 ease-in-out`}
           ></div>
 
           {/* Steps */}
           {[1, 2, 3, 4].map((step) => (
             <div
               key={step}
-              className={`w-8 h-8 flex items-center justify-center rounded-full border-[3px] transition-all duration-300 ${
+              className={`w-8 h-8 z-0 flex items-center justify-center rounded-full border-[3px] transition-all duration-300 ${
                 step <= currentStep
                   ? "border-[#3498db] text-[#3498db] bg-white"
                   : "border-[#e0e0e0] text-[#999] bg-white"

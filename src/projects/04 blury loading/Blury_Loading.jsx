@@ -60,7 +60,7 @@ function My_Blury_loading() {
         }
         return count + 1;
       });
-    }, 100);
+    }, 10);
     return () => clearInterval(interval);
   }, []);
 

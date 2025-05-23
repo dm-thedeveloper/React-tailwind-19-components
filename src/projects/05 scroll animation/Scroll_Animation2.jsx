@@ -72,18 +72,32 @@ function Scroll_Animation2() {
   );
 }
 
-function Card({ index, cardRef , isVisible }) {
+function Card({ index, cardRef, isVisible }) {
+  // Determine animation class based on index
+  let animationClass = "";
+
+  if (index === 2) {
+    animationClass = "translate-y-12 scale-50";
+  } else if (index % 2 === 0) {
+    animationClass = "translate-x-8";
+  } else {
+    animationClass = "translate-x-[-8px]";
+  }
+
   return (
-    <>
-      <div
-        key={index}
-        ref={cardRef}
-        className={`h-[200px] flex justify-center items-center text-white text-5xl font-bold w-[400px] border-[5px] duration-500 bg-blue-600 ${isVisible ? "translate-y-0 opacity-[1]":"translate-y-8 opacity-0"}` }
-      >
-        {" "}
-        {index + 1}{" "}
-      </div>
-    </>
+    <div
+      key={index}
+      ref={cardRef}
+      className={`h-[200px] flex justify-center items-center text-white text-5xl font-bold w-[400px] border-[5px] duration-500 bg-blue-600
+        ${
+          isVisible
+            ? "opacity-100 translate-y-0 scale-100"
+            : `opacity-0 ${animationClass}`
+        }`}
+    >
+      {index + 1}
+    </div>
   );
 }
+
 export default Scroll_Animation2;

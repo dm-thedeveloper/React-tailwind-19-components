@@ -43,31 +43,52 @@ function Hidde_Search_Widget() {
 
 
 
-function Hidde_Search_Widget2() {
 
-  const [show,setShow]  =useState(false);
+function Hidde_Search_Widget2() {
+  const [show, setShow] = useState(false);
+  const inputRef = useRef(null);
+
+  const handleOutsideClick = (e) => {
+    if (inputRef.current && !inputRef.current.contains(e.target)) {
+      setShow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("mousedown", handleOutsideClick);
+    window.addEventListener("touchstart", handleOutsideClick);
+
+    return () => {
+      window.removeEventListener("mousedown", handleOutsideClick);
+      window.removeEventListener("touchstart", handleOutsideClick);
+    };
+  }, []);
 
   return (
-<>
-<div className="min-h-screen bg-blue-600 flex justify-center items-center">
-
-  {/* Search */}
-  <div className="flex items-center relative">
-    <input type="text" className={`h-10 duration-300 outline-none pl-2 pr-[30px] text-xl  ${show ? " max-w-[90%] w-[300px]":"w-10"}`} />
-    {/* Icon */}
-    <button onClick={()=>setShow(prev => !prev)} className={ `h-10 w-10 bg-white flex justify-center items-center text-3xl text-blue-800 absolute top-0 left-0 cursor-pointer  ${show  ?"translate-x-[250px]" :""} duration-300`}>
-    <i class="fa-solid fa-magnifying-glass"></i>
-    </button>
-
-  </div>
-
-
-
-
-</div>
-
-
-</>  )
+    <div className="min-h-screen bg-blue-600 flex justify-center items-center">
+      {/* Search */}
+      <div ref={inputRef} className="flex items-center relative">
+        <input
+          type="text"
+          placeholder="Search here..."
+          className={`h-10 duration-300 outline-none pl-2 pr-[30px] text-xl bg-white rounded ${
+            show ? "max-w-[90%] w-[300px]" : "w-10"
+          }`}
+        />
+        {/* Icon */}
+        <button
+          onClick={() => setShow((prev) => !prev)}
+          className={`h-10 w-10 bg-white flex justify-center items-center text-2xl text-blue-800 absolute top-0 left-0 cursor-pointer ${
+            show ? "translate-x-[250px]" : ""
+          } duration-300`}
+        >
+          <i className="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </div>
+  );
 }
+
+
 
 export {Hidde_Search_Widget2 , Hidde_Search_Widget}

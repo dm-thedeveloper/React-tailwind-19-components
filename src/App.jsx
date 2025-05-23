@@ -14,6 +14,7 @@ import {
   Form_Wave_Animation2,
   Form_Wave_Animation_CSS,
   Hidde_Search_Widget2,
+  My_Blury_loading,
   New_Tab,
   Progress_Steps,
   Progress_Steps_CSS,
@@ -36,10 +37,10 @@ function App() {
         {/* <Progress_Steps/> */}
         {/* <Hidde_Search_Widget/> */}
         {/* <Hidde_Search_Widget2/> */}
-        {/* <BlurryLoading/> */}
         {/* <My_Blury_loading/> */}
+        
         {/* <Scroll_Animation/> */}
-        {/* <Scroll_Animation2/> */}
+        <Scroll_Animation2/>
         {/* <Slit_Landing_CSS/> */}
         {/* <Form_Wave_Animation/> */}
         {/* <Form_Wave_Animation2/> */}
@@ -53,7 +54,7 @@ function App() {
         {/* <Drink_Water/> */}
         {/* <Slider/> */}
         {/* <New_Tab/> */}
-        <ThemeClock/>
+        {/* <ThemeClock/> */}
         {/* <Button_Ripple_Effect/> */}
         {/* <CSS_Filter_Property/> */}
         {/* <Clip_path/> */}
