@@ -9,15 +9,23 @@ function Form_Wave_Animation_CSS() {
     </span>);
 
   return (
-    <>a
+    <>
       <div className="Form-wave-body-css">
         <div className="waver-css-contaover">
           <h1>Please Login </h1>
 
           <div className="form-control-css">
-            <input required type="text" placeholder=" " />
+            <input required type="email" placeholder=" " />
             <label htmlFor="">
               {waveLabel("Email")}
+            </label>
+          </div>
+
+
+             <div className="form-control-css">
+            <input required type="password" placeholder=" " />
+            <label htmlFor="">
+              {waveLabel("Password")}
             </label>
           </div>
         </div>

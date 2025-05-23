@@ -40,7 +40,7 @@ function App() {
         {/* <My_Blury_loading/> */}
         
         {/* <Scroll_Animation/> */}
-        <Scroll_Animation2/>
+        {/* <Scroll_Animation2/> */}
         {/* <Slit_Landing_CSS/> */}
         {/* <Form_Wave_Animation/> */}
         {/* <Form_Wave_Animation2/> */}
@@ -56,7 +56,7 @@ function App() {
         {/* <New_Tab/> */}
         {/* <ThemeClock/> */}
         {/* <Button_Ripple_Effect/> */}
-        {/* <CSS_Filter_Property/> */}
+        <CSS_Filter_Property/>
         {/* <Clip_path/> */}
       </Body>
     </>
